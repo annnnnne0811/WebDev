@@ -73,18 +73,19 @@ form {
     color:#FFC5C5;
 }
 
-.label{
+/*.label{
     position: absolute;
     top: 0;
     left: 0;
-    color: white;
+    color: black;
     font-size: 13px;
     font-weight: 500;
     font-family: poppins;
     opacity: 0;
     z-index: -1;
     transition: 0.025s ease-out;
-}
+}*/
+
 /*
     - .input:focus: targets the input element with the class "input" when it is in focus (ie: when userclicks or tabs in the input field)
     - + : adjacent sibling combinator. Selects the elements immediately preceded by the specified element.
@@ -108,7 +109,8 @@ form {
 
 .icon{
     color: white;
-    position: absolute;
+    font-family: poppins;
+    position: center;
     right: 0px;
     top: 50%;
     transform: translate(0, -50%);
@@ -142,4 +144,104 @@ form {
 .btn{
     width: 100%;
     height: 40px;
+    background:#89B9AD;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 6mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+
+.btn span {
+    color: rgb(40,40,40);
+    font-family: poppins;
+    font-size: 16px;
+
+}
+
+.text { 
+    width: 100%;
+    font-family: poppins;
+    font-size: 13px;
+    text-align: center;
+    color: #739072;
+
+}
+
+.text a {
+    color: #3A4D39;
+    font-weight: 600;
+}
+
+.dots {
+    width:fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.1);
+    margin:1px;
+    animation: load 0.5s ease-out infinite alternate var(--delay);
+
+
+}
+
+@keyframes load {
+    0%{
+        background: rgb(0,0,0);
+    }
+    50%,
+    100%{
+        background: rgba(0,0,0,0.1);
+    }
+    
+}
+
+.btn .dots{
+    display: none;
+}
+
+.btn span {
+    display: block;
+
+}
+
+.btn.active .dots {
+    display:flex;
+}
+
+.btn.active span{
+    display:none;
+
+}
+
+.input.active{
+    animation: shake 0.25s ease-in-out 3;
+}
+
+@keyframes shake {
+    0%{
+        margin-left: 0px;
+    }
+    25%{
+        margin-left: 5px;
+
+    }
+    75% {
+        margin-left: -5px;
+    }
+    100% {
+        margin-left: 0px;
+    }
 }
