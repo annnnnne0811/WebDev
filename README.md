@@ -1,2 +1,2 @@
 # WebDev
-Daily web dev practice 
+Daily web dev practice / experiments
