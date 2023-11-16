@@ -1,4 +1,5 @@
 try to incoporate php and make the login page responsive eg: saving login info, be able to create new acc etc
+try to put some sort of database to keep information in.
 
 
 things to fix 
